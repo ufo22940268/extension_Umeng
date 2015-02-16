@@ -1,0 +1,25 @@
+{
+  "name": "Content settings",
+  "version": "0.2",
+  "description": "Shows the content settings for the current site.",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "management",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+//      "matches": ["http://www.umeng.com/*/error_types"],
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["k.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "contentSettings.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
